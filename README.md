@@ -2,10 +2,17 @@
 ### What is a CTE?
 - A CTE (Common Table Expression) is a temporary result set that you can reference within a SELECT, INSERT, UPDATE, or DELETE statement.
 ### Benefits of Using CTEs:
-- Simplifies complex queries
-- Improves readability and maintainability
-- Facilitates recursive queries
-- Minimized I/O operations
+- Simplifies complex queries - Improves readability and maintainability
+- Facilitates recursive queries - Performing the same calculation multiple times over across multiple query components
+- Minimized I/O operations - Needing to reference a derived table multiple times in a single query
+- Less database footprint - An alternative to creating a view in the database
+#### Applications - Relational Databases
+- PostGres
+- Redshift
+- Oracle
+- MySQL
+- SQL Server
+- Databricks DataLakes
 ### CTE Syntax
 ```
 WITH cte_name (column1, column2, ...) AS (
