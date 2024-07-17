@@ -23,14 +23,35 @@ WITH cte_name (column1, column2, ...) AS (
 SELECT ...
 FROM cte_name
 ```
-Example Basic CTE
+#### Example Basic CTE
 ```
 WITH EmployeeCTE AS (
-    SELECT EmployeeID, FirstName, LastName, ManagerID
+    SELECT EmployeeID, FirstName, LastName, ManagerID, DepartmentID
     FROM Employees
 )
 SELECT *
 FROM EmployeeCTE;
+```
+#### Example Advanced CTE
+```
+WITH EmployeeCTE AS (
+    SELECT EmployeeID, FirstName, LastName, ManagerID
+    FROM Employees
+),
+DepartmentCTE AS(
+    SELECT DepartmentID, DepartmentName
+    FROM Departments
+    WHERE DepartmentName IS NOT NULL OR DepartmentName <> ''
+),
+EmployeeAndManagersCTE AS(
+    SELECT e.*, m.FirstName AS ManagerFirstName, m.LastName AS ManagerLastName
+    FROM EmployeeCTE e
+    INNER JOIN EmployeeCTE m ON m.EmployeeID = e.ManagerID
+)
+
+SELECT *
+FROM EmployeeAndManagersCTE em
+JOIN DepartmentCTE d ON d.DepartmentID = em.DepartmentID;
 ```
 ### Using CTE with MERGE 
 - The MERGE statement allows you to perform INSERT, UPDATE, and DELETE operations in a single statement.
