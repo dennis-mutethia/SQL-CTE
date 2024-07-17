@@ -29,7 +29,10 @@ FROM EmployeeCTE;
 - The MERGE statement allows you to perform INSERT, UPDATE, and DELETE operations in a single statement.
 - Commonly used for synchronizing two tables.
 ### MERGE Syntax 
+All your CTEs should be defined before the MERGE operation
 ```
+/* Define all your CTEs here; Before the MERGE operation */
+
 MERGE INTO target_table AS target
 USING source_table AS source
 ON target.id = source.id
