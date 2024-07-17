@@ -1,3 +1,7 @@
+-- Before departments, the school had falculties; 
+-- Update departments table with respective names from falculties table. 
+-- Insert new department if department_id does not exist.
+
 WITH source AS(
     SELECT * FROM falculties
 )

@@ -1,3 +1,5 @@
+--Fetch students who have scored more than average marks of all students
+
 WITH all_students AS(
     SELECT * FROM students
 ),

@@ -1,3 +1,5 @@
+--Update students status to either "below average" or "above average"
+
 WITH all_students AS(
     SELECT * FROM students
 ),
@@ -19,3 +21,5 @@ WHEN MATCHED AND target.marks > source.avg_marks
     THEN UPDATE SET status = 'Above Average'
 WHEN MATCHED AND target.marks = source.avg_marks
     THEN UPDATE SET status = 'Average'
+WHEN NOT MATCHED 
+    THEN DO NOTHING
