@@ -12,7 +12,7 @@
 - Oracle
 - MySQL
 - SQL Server
-- Databricks DataLakes
+- Databricks SQL Warehouse/DataLake
 ### CTE Syntax
 ```
 WITH cte_name (column1, column2, ...) AS (
