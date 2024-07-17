@@ -12,7 +12,7 @@ source AS(
     SELECT * 
     FROM all_students, average_marks
 )
-
+--Use MERGE operation to update students table
 MERGE INTO students AS target 
 USING source ON target.student_id = source.student_id
 WHEN MATCHED AND target.marks < source.avg_marks
