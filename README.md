@@ -5,7 +5,7 @@
 - Simplifies complex queries - Improves readability and maintainability
 - Facilitates recursive queries - Performing the same calculation multiple times over across multiple query components
 - Minimized I/O operations - Needing to reference a derived table multiple times in a single query
-- Less database footprint - An alternative to creating a view in the database
+- Less database footprint - An alternative to creating views or temporary tables in the database
 #### Applications - Relational Databases
 - PostGres
 - Redshift
