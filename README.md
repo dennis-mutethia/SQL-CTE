@@ -74,6 +74,6 @@ WHEN NOT MATCHED THEN
 ### Practice/Demo
 1. Fetch students who have scored more than average marks of all students
 2. Update students status to either "below average" or "above average"
-3. Before departments, the school had falculties; Update departments table with respective names from falculties table. Insert new department if department_id does not exist.
+3. Update departments table with respective names from falculties table. Insert new department if department_id does not exist.
 4. Update CTE in 2 above to ALSO Delete any student whose associated department_id does not exist
 5. Fetch all departments whose average marks is more than average marks of all departments
